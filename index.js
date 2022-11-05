@@ -1,14 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
-const apiData = require("./indiaPincode.json")
 
-app.use(cors())
+app.use(cors());
+
+const port = process.env.PORT || 3000;
+const apiData = require("./indiaPincode.json");
+
 
 
 app.get("/", (req, res) => {
-    res.send("Indian PinCode API")
+    res.send("Namaste");
 });
 
 // app.get("/pincode", (req, res) => {
@@ -25,7 +27,7 @@ app.get("/pincode", (req, res) => {
 });
 
 app.listen(port, ()=>{
-    console.log("Namaste from terminal")
+    console.log("Namaste from terminal");
 })
 
 
