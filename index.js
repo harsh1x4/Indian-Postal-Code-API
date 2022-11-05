@@ -4,10 +4,11 @@ const app = express();
 
 app.use(cors());
 
+const path = require('path');
 const port = process.env.PORT || 3000;
 const apiData = require("./indiaPincode.json");
 
-
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.get("/", (req, res) => {
     res.send("Namaste");

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&family=Dosis:wght@200;400&family=Great+Vibes&family=Hind&family=Jost&family=Kaushan+Script&family=La+Belle+Aurore&family=Lobster&family=Pacifico&family=Poppins:wght@200;300;400;500;600&family=Shadows+Into+Light&family=Source+Code+Pro:wght@300;400&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.parent {
+    margin: 20px;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+code{
+    font-family: 'Source Code Pro', monospace;
+}
+i{
+    cursor: pointer;
+}
+
+/* =============Header============= */
+h1{
+    padding: 10px 0;
+}
+h1 span {
+    font-size: 50px;
+    /* background: linear-gradient(71.57deg, #0022FF -71.95%, #0022FF -36.3%, #C8FAFB -6.31%, #A5EDB6 15.51%, #FAE85A 32.38%, #FDAC3E 54.58%, #FF5C00 83.34%), linear-gradient(270.08deg, #FF5F02 -11.48%, #FBD150 28.06%, #B9F5DC 54.85%, #ADDEFC 90.07%, #386AFF 104.06%); */
+    /* background: linear-gradient(92.05deg, #d2a8ff 12.09%, #f778ba 42.58%, #ff7b72 84.96%); */
+    background: linear-gradient(92.05deg, #944ffc 12.09%, #f778ba 42.58%, #ff7b72 84.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* =============Sections Styling============= */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/*=============Left-Text============= */
+.text{
+    padding: 10px 20px 0 0;
+    font-size: 18px;
+}
+.para{
+    margin-bottom: 30px;
+}
+.note{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+}
+.codes{
+    color: #8b949e;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(19, 16, 16) !important;
+}
+.codes .copy-icon{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.codes code{
+    font-size: 16px;
+    background-color: rgb(19, 16, 16) !important;
+    word-break: break-all !important;
+}
+
+/* =============Right-Window============= */
+.apple_window {
+    padding: 10px;
+    margin: auto;
+}
+
+/* ======================================= */
+/* ==========Apple Styled Window========== */
+/* ======================================= */
+
+.header {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    border-radius: 7px 7px 0 0;
+}
+.window {
+    width: 35vw;
+    background: #000;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.5); */
+}
+.content {
+    padding: 10px;
+    color: #8b949e;
+}
+.content pre[class*="language-"]{
+    background: #000 !important;
+}
+.content pre code{
+    white-space: pre-line !important;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background: #ED594A;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+.dot:nth-child(2) {
+    background: #FDD800;
+}
+.dot:nth-child(3) {
+    background: #5AC05A;
+}
+
+@media only screen and (max-width: 1200px) {
+    .codes .copying-links{
+        font-size: 14px;
+    }
+  }
+@media only screen and (max-width: 800px) {
+    main{
+        flex-direction: column;
+    }
+    h1{
+        padding: 0;
+    }
+    .codes .copying-links{
+        font-size: 16px;
+    }
+    .text{
+        padding: 0;
+    }
+    .window{
+        width: 90vw;
+        margin-top: 30px;
+    }
+    .apple_window{
+        padding: 0;
+    }
+  }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostalCode API</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/post-office.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-xonokai.min.css" integrity="sha512-WMvUL/ap3JTqQEo4CIbB0jR2ACx+Qxg78UdKIWzV31CrefYZGtxuSod8uJwWDyzeVpQ0vKnXA41vS4UEvlNkoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="parent">
+        <div class="wrapper">
+            <header>
+                <h1><span>Indian PinCode API</span></h1>
+            </header>
+            <main>
+                <section class="text">
+                    <div class="para">
+                        Anyone can access the API using:<br><br>
+                        >> You can get all the Pincodes from this <a
+                            href="https://indianpincodeapi.herokuapp.com/pincode" id="link" target="_blank">Link</a>.
+                        <div class="codes">
+                            <code class="copying-links" id="copy-link">https://indianpincodeapi.herokuapp.com/pincode</code>
+                            <div class="copy-icon">
+                                <i class="fa-solid fa-clone copy" onclick="myFunction(event)"></i>
+                            </div>
+                        </div>
+                        >> You can use&nbsp; <span id="query">?Pincode=</span> &nbsp;to get the details of a specific
+                        PinCode.
+                        <div class="codes">
+                            <!-- <code class="copy-link" id="query-link">https://indianpincodeapi.herokuapp.com/pincode?Pincode=828112</code> -->
+                            <code class="copying-links" id="query-link"></code>
+                            <div class="copy-icon">
+                                <i class="fa-solid fa-clone copy" onclick="myFunction(event)"></i>
+                            </div>
+                        </div>
+                        The result of the above link will be obtained in a JSON format, as shown below:
+                        <div class="codes">
+                            <!-- <code class="language-json" id="response_data">
+                                [{"CircleName":"Jharkhand Circle","RegionName":"DivReportingCircle","DivisionName":"Dhanbad Division","OfficeName":"Jamadoba SO","Pincode":828112,"OfficeType":"PO","Delivery":"Delivery","District":"DHANBAD","StateName":"JHARKHAND","Latitude":23.699714,"Longitude":86.401839}]
+                            </code> -->
+                            <code class="language-json" id="response_data">
+                            </code>
+                        </div>
+                    </div>
+                    <span class="note">NOTE: The data for the Locality and Village has not been yet uploaded.</span>
+                </section>
+
+                <section class="apple_window">
+                    <div class="window">
+                        <div class="header">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <!-- <pre class="language-javascript">
+                            url="https://indianpincodeapi.herokuapp.com/pincode";
+                            fetch(url)<br>
+                            .then((response) => response.json())<br>
+                            .then((data) => {<br>
+                                console.log(error);<br>
+                            })<br>
+                            .catch((error) => {<br>
+                                console.log(error);<br>
+                            })<br>
+                            </pre> -->
+                            <pre class="language-javascript">
+                                <code class="language-javascript">
+                                    url="https://indianpincodeapi.herokuapp.com/pincode";
+                                    fetch(url)
+                                    .then((response) => response.json())
+                                    .then((data) => {
+                                        console.log(error);
+                                    })
+                                    .catch((error) => {
+                                        console.log(error);
+                                    })
+                                </code>
+                            </pre>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        function myFunction(e) {
+            var copyText = e.target.previousElementSibling;
+            navigator.clipboard.writeText(copyText.innerText);
+            console.log(copyText.innerText);
+        }
+    </script>
+    <script src="/js/script.js" defer type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"
+        defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-json.min.js"></script>
+</body>
+
+</html>
