@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/assets/post-office.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-xonokai.min.css" integrity="sha512-WMvUL/ap3JTqQEo4CIbB0jR2ACx+Qxg78UdKIWzV31CrefYZGtxuSod8uJwWDyzeVpQ0vKnXA41vS4UEvlNkoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-xonokai.min.css" />
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                             href="https://indianpincodeapi.herokuapp.com/pincode" id="link" target="_blank">Link</a>.
                         <div class="codes">
                             <code class="copying-links" id="copy-link">https://indianpincodeapi.herokuapp.com/pincode</code>
-                            <div class="copy-icon">
-                                <i class="fa-solid fa-clone copy" onclick="myFunction(event)"></i>
+                            <div class="copy-icon" data-clipboard-target="#copy-link">
+                                <i class="fa-solid fa-clone copy"></i>
                             </div>
                         </div>
                         >> You can use&nbsp; <span id="query">?Pincode=</span> &nbsp;to get the details of a specific
@@ -35,8 +35,8 @@
                         <div class="codes">
                             <!-- <code class="copy-link" id="query-link">https://indianpincodeapi.herokuapp.com/pincode?Pincode=828112</code> -->
                             <code class="copying-links" id="query-link"></code>
-                            <div class="copy-icon">
-                                <i class="fa-solid fa-clone copy" onclick="myFunction(event)"></i>
+                            <div class="copy-icon" data-clipboard-target="#copy-link">
+                                <i class="fa-solid fa-clone copy"></i>
                             </div>
                         </div>
                         The result of the above link will be obtained in a JSON format, as shown below:
@@ -90,15 +90,9 @@
             </main>
         </div>
     </div>
-    <script>
-        function myFunction(e) {
-            var copyText = e.target.previousElementSibling;
-            navigator.clipboard.writeText(copyText.innerText);
-            console.log(copyText.innerText);
-        }
-    </script>
-    <script src="/js/script.js" defer type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" defer></script>
+    <script src="/js/script.js" defer type="module"></script>
 </body>
 
 </html>

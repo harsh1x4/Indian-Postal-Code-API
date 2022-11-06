@@ -27,3 +27,5 @@ const a1 = annotate(n1, { type: 'circle', color: 'red', padding: 6 });
 a.show();
 a1.show();
 // a2.show();
+
+new ClipboardJS('.copy-icon');

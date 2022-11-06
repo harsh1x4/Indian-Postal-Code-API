@@ -72,6 +72,14 @@ main {
     display: flex;
     align-items: center;
     padding: 5px;
+    cursor:pointer;
+    border: 1px solid #8b949e;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+.copy-icon:hover{
+    background: #8b949e;
+    color: rgb(19, 16, 16);
 }
 .codes code{
     font-size: 16px;
