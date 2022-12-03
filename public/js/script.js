@@ -3,12 +3,12 @@ import { annotate } from 'https://unpkg.com/rough-notation?module';
 let respData = document.getElementById('response_data');
 let queryLink = document.getElementById('query-link');
 
-fetch('https://indianpincodeapi.herokuapp.com/pincode')
+fetch('https://indianpincodeapi.onrender.com/pincode')
     .then((res) => res.json())
     .then((data) => {
         // console.log(data[Math.floor(Math.random()*data.length)]);
         let responseData = data[Math.floor(Math.random() * data.length)];
-        queryLink.innerText = `https://indianpincodeapi.herokuapp.com/pincode?Pincode=${responseData.Pincode}`;
+        queryLink.innerText = `https://indianpincodeapi.onrender.com/pincode?Pincode=${responseData.Pincode}`;
         respData.innerText = JSON.stringify(responseData);
     })
     .catch((error) => {
